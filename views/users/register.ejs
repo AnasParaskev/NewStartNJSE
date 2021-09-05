@@ -1,55 +1,64 @@
-<% layout('layouts/boilerplate') %>
-  
-
+<% layout('layouts/boilerplate')%>
 <h1>Register</h1>
-<h3>Provide the required data to sign up.</h3>
- 
-
-
-<form action="/register" method="POST" class="container validated-form col-6 offset-3" novalidate="">
-   
-   <div class="mb-3">
-      <label for="username" class="form-label">Username</label>
-      <input type="text" class="form-control" id="username" placeholder="Enter a Unique username" name="username" required>
-      <div class="invalid-feedback">Username is required</div>
-   </div>
-   
-   <div class="mb-3">
-      <label for="e-mail" class="form-label">Email address</label>
-      <div class="input-group has-validation mb-3">
-      <span class="input-group-text" id="inputGroupPrepend">@</span>
-      <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-      <div class="invalid-feedback">Email is required</div>
-   </div>
-   
-   <div class="mb-3">
-      <label for="password" class="form-label">Password</label>
-      <input type="password" class="form-control" id="password" placeholder="Enter a Strong password" name="password" mindlength="8" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"required>
-      <div class="invalid-feedback">Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character</div>
-   </div>
-   <button class="btn btn-primary" type="submit">Register</button>
+<form action="/register" method="POST" class="validated-form" novalidate>
+    <div class="mb-3">
+        <label class="form-label" for="username">Username</label>
+        <input class="form-control" type="text" id="username" name="username" required>
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="email">Email</label>
+        <input class="form-control" type="email" id="email" name="email" required>
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="password">Password</label>
+        <input class="form-control" type="password" id="password" name="password" required>
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+    </div>
+    <button class="btn btn-success">Register</button>
 </form>
 
-<script>
-   // Example starter JavaScript for disabling form submissions if there are invalid fields
-(function () {
-  'use strict'
 
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const forms = document.querySelectorAll('.validated-form')
 
-  // Loop over them and prevent submission
-  Array.from(forms)
-    .forEach(function (form) {
-      form.addEventListener('submit', function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
 
-        form.classList.add('was-validated')
-      }, false)
-    })
-})()
-</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

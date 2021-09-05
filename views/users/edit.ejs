@@ -1,0 +1,14 @@
+<% layout('layouts/boilerplate')%>
+<h1>Edit</h1>
+<form action="/edit" method="POST" class="validated-form" novalidate>
+    
+    <div class="mb-3">
+        <label class="form-label" for="password">New Password</label>
+        <input class="form-control" type="password" id="password" name="newpassword" required>
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+    </div>
+    <button class="btn btn-success">Update</button>
+    
+</form>
